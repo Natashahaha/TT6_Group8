@@ -57,7 +57,7 @@ const Register = () => {
             <label htmlFor="username">
               <i className="fas fa-user" />
             </label>
-            <input type="text" id="username" name="username" placeholder="username" required />
+            <input type="text" id="username" name="username" placeholder="Username" required />
             <div className="tabSubmitBtn">
               <button type="submit">REGISTER</button>
             </div>
