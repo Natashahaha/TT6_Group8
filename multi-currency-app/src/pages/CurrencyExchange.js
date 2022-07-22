@@ -4,7 +4,6 @@ import Form from 'react-bootstrap/Form';
 import { Container } from 'react-bootstrap';
 import Dropdown from 'react-bootstrap/Dropdown';
 import axios from 'axios'
-import Currencies from './Currencies';
 import ListGroup from 'react-bootstrap/ListGroup';
 
 
