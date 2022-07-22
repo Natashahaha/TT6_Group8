@@ -7,6 +7,7 @@ const dotenv = require('dotenv')
 const authRoute = require('./routers/auth.js')
 // const postRoute = require('./routers/posts')
 const curRoute = require('./routers/currency')
+const exchangeRoute = require('./routers/exchange')
 // const passport = require('passport')
 const cors = require('cors')
 
@@ -32,6 +33,7 @@ app.use(express.json())
 // app.use('/api/users', userRoute)
 app.use('/api/auth', authRoute)
 app.use('/api/cur', curRoute)
+app.use('/api/exchange',exchangeRoute)
 // app.use('/api/posts',postRoute)
 
 
