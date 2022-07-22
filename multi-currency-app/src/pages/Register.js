@@ -1,12 +1,11 @@
+import { Link } from "react-router-dom";
 import "./Login.css";
 import background from './marina.jpg';
 
-import { Link } from "react-router-dom";
-
-const Login = () => {
+const Register = () => {
   return (
     <div style={{ backgroundImage: `url(${background})` }}>
-      <meta charSet="UTF-8" />{" "}
+      <meta charSet="UTF-8" />
       <link
         rel="stylesheet"
         type="text/css"
@@ -17,16 +16,16 @@ const Login = () => {
         rel="stylesheet"
         href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
       />
-      <div className="login">
+      <div className="register">
         <div className="links">
-          <Link to="/register" href="#">
+          <Link to="/register" className="active" href="#">
             Register
           </Link>
-          <Link to="/" className="active" href="#">
+          <Link to="/" href="#">
             Login
           </Link>
         </div>
-        <form id="loginForm" method="POST" action="index.html">
+        <form id="regForm" method="POST" action="register.html">
           <div className="tabContent">
             <label htmlFor="email">
               <i className="fas fa-envelope" />
@@ -46,10 +45,14 @@ const Login = () => {
               id="password"
               name="password"
               placeholder="Password"
-              required
+              minLength={8}
             />
+            <label htmlFor="username">
+              <i className="fas fa-user" />
+            </label>
+            <input type="text" id="ic" name="ic" placeholder="NRIC" required />
             <div className="tabSubmitBtn">
-              <button type="submit">LOGIN</button>
+              <button type="submit">REGISTER</button>
             </div>
           </div>
         </form>
@@ -58,4 +61,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
