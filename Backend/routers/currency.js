@@ -3,8 +3,8 @@ const router = express.Router()
 const Currency = require('../models/currencyModel')
 
 router.get('/all', (req,res) => {
-    Currency.find().then(users => {
-        res.json(users);
+    Currency.find().then(currencies => {
+        res.json(currencies);
     })
 })
 
