@@ -1,0 +1,23 @@
+{
+  "name": "tt6_group8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Natashahaha/TT6_Group8.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Natashahaha/TT6_Group8/issues"
+  },
+  "homepage": "https://github.com/Natashahaha/TT6_Group8#readme",
+  "dependencies": {
+    "mongoose": "^6.4.6"
+  }
+}
