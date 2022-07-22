@@ -63,10 +63,12 @@ const Login = () => {
     // trying to modify
       <div style={{ 
         backgroundImage: `url(${background})`,
+        backgroundPosition: "center",
         width: '100vw',
-        height: '100vh'
+        height: '100vh',
+        backgroundSize: 'cover'
       }}>
-        
+
       <meta charSet="UTF-8" />{" "}
       <link
         rel="stylesheet"
