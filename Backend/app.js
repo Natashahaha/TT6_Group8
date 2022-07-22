@@ -8,6 +8,7 @@ const authRoute = require('./routers/auth.js')
 // const postRoute = require('./routers/posts')
 const curRoute = require('./routers/currency')
 const exchangeRoute = require('./routers/exchange')
+const walletRoute = require('./routers/wallet')
 // const passport = require('passport')
 const cors = require('cors')
 
@@ -34,6 +35,7 @@ app.use(express.json())
 app.use('/api/auth', authRoute)
 app.use('/api/cur', curRoute)
 app.use('/api/exchange',exchangeRoute)
+app.use('/api/wallet',walletRoute)
 // app.use('/api/posts',postRoute)
 
 
