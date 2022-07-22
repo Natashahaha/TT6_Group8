@@ -81,6 +81,7 @@ body.before {
     border: 1px solid #dee0e4;
     margin-bottom: 10px;
     padding: 0 15px;
+    font-size: 18px;
 }
 
 .tabContent input:hover{
