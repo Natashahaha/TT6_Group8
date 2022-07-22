@@ -64,9 +64,10 @@ const Login = () => {
       <div style={{ 
         backgroundImage: `url(${background})`,
         width: '100vw',
-        height: '100vh'
+        height: '100vh',
+        backgroundSize: 'cover'
       }}>
-        
+
       <meta charSet="UTF-8" />{" "}
       <link
         rel="stylesheet"
