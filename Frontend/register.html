@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="./static/style.css">
+    <meta charset="UTF-8">
+    <title>Twitter Cataloger</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+
 </head>
-<body>
-    <div class="box">
-        <div class="headerBar">
-            <div class="logo">
-                <img src="./static/logo.png">
-            </div>
-            <h1>Hackathon</h1>
-            <div class="navigationTab">
-                <a href="register.html">Register</a>
-                <a href="index.html">Login</a>
-                <a href="dashboard.html">Dashboard</a>
-                <a href="">Logout</a> 
-            </div>
-        </div>       
-        <div class="loginRegContainer">
-            <div class="loginRegTab">
-                <div class="tabOption">
-                    <a class="active"href="{{ url_for('register') }}">Register</a>
-                    <a href="{{ url_for('index') }}">Login</a>
-                </div>
-                <form id="regForm">
-                    <div class="tabContent">
-                        <label class="email_label"for="email">Enter Your Email:</label>
-                        <input type="email"id="email"name="email"required>
-
-                        <label class="password_label"for="password">Enter Your Password:</label>
-                        <input type="password"id="password"name="password"minlength="8">
+<body class="before">
+    <div class="register">
+        <div class="links">
+            <a class="active"href="{{ url_for('register') }}">Register</a>
+            <a href="{{ url_for('index') }}">Login</a>
+        </div>
+        
+        <form id="regForm" method="POST" action="{{ url_for('register') }}">
+            <div class="tabContent">
                 
-                        <label class="username_label"for="ic">Username</label>
-                        <input type="text"id="username"name="username"required>
+                <label for="email">
+					<i class="fas fa-envelope"></i>
+				</label>
+                <input type="email"id="email"name="email" placeholder="Email" required>
 
-                        <div class="tabSubmitBtn">
-                            <button type="submit">REGISTER</button>
-                    </div>
-                </form>
+                <label for="password">
+					<i class="fas fa-lock"></i>
+				</label>
+                <input type="password"id="password"name="password" placeholder="Password" minlength="8">
+                
+                <label for="username">
+					<i class="fas fa-user"></i>
+				</label>
+                <input type="text"id="ic"name="ic" placeholder="NRIC" required>
+                
+                {% if message  %}
+                <div class="alert" role="alert">
+                    <li>{{ message }}</li>
+                </div>
+                {% endif %}
+                <div class="tabSubmitBtn">
+                    <button type="submit">REGISTER</button>
             </div>
-        </div>   
-    </div>    
+        </form>
+        
+    </div>
 </body>
-</html> 
+</html>
