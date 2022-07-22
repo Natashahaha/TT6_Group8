@@ -63,6 +63,7 @@ const Login = () => {
     // trying to modify
       <div style={{ 
         backgroundImage: `url(${background})`,
+        backgroundPosition: "center",
         width: '100vw',
         height: '100vh',
         backgroundSize: 'cover'

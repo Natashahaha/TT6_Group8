@@ -7,7 +7,7 @@ const DashBoard = () => {
             <br> username/email</br>
           </p>
           <div class="navigationTab">
-            <Link to="/dasboard" href="#">
+            {/* <Link to="/dasboard" href="#">
               Dashboard
               </Link>
             <Link to="/wallet" href="#">
@@ -15,7 +15,7 @@ const DashBoard = () => {
               </Link>
             <Link to="/exchange" href="#">
               Exchange
-            </Link>
+            </Link> */}
           </div>
         </div>
 
