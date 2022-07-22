@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-const TransactionSchema = new Schema({
+const TransactionSchema = new mongoose.Schema({
     id:  Number,
     walletId: Number,
     debitId: Number,
