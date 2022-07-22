@@ -9,10 +9,12 @@ router.get('/all', (req,res) => {
 })
 
 
-router.get('/test/:id', (req,res) => {
-    Wallet.find({_id: id}).then(wallets => {
+router.get('/test', (req,res) => {
+    Wallet.find({user_id: "1"}).then(wallets => {
         res.json(wallets)
     })
 })
 
+
+// {_id: '62da290051b0f3a99ac453a0'}
 module.exports = router
