@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const WalletSchema = new mongoose.Schema({
     id: Number,
     user_id: {
-        type: String,
+        type: Number,
         required: true
     },
     name: {
@@ -18,4 +18,4 @@ const WalletSchema = new mongoose.Schema({
 
 )
 
-module.exports = mongoose.model('Wallet', WalletSchema)
+module.exports = mongoose.model('Wallet',WalletSchema)

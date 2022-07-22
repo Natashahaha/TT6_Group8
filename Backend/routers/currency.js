@@ -1,24 +1,21 @@
 const express = require('express')
 const router = express.Router()
 const Currency = require('../models/currencyModel')
+const Wallet = require('../models/walletModel')
 
 router.get('/all', (req,res) => {
-    Currency.find().then(users => {
-        res.json(users);
+    Currency.find().then(currencies => {
+        res.json(currencies);
     })
 })
 
-router.get('/', (req,res) => {
-    res.send('Good')
-})
+router.post('/deduct', (req,res) => {
+    const deductedAmount = req.amount
+    const cur_id = req.cur_id
 
-
-router.post('/test', (req,res) => {
-    const newCur = new Currency({
-        id: 1,
-        wallet_id: 1
+    Currency.findOneAndUpdate({id: cur_id}, {amount: amount - deductedAmount} ).then(currency => {
+        res.json(currency)
     })
-    newCur.save().then(res.send('OKs'))
 })
 
 module.exports = router

@@ -1,19 +1,11 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose")
 
-const ExchangeSchema = new mongoose.Schema({
-    id:{
-        type: Number,
-    },
-    base_currency:{
-        type: String,
-    },
-    exchange_currency:{
-        type: String,
-    },
-    rate:{
-        type: Number
-    }
-}
-)
+const ExchangeRateSchema = new mongoose.Schema({
+    id:  Number,
+    base_currency: String,
+    exchange_currency: String,
+    rate: Number,
+  }
+);
 
-module.exports = mongoose.model('exchangerate', ExchangeSchema)
+module.exports = mongoose.model('ExchangeRate', ExchangeRateSchema)
