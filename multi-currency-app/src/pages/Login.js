@@ -1,9 +1,22 @@
 import "./Login.css";
-import background from './marina.jpg';
+import background from "./marina.jpg";
 
-import { Link } from "react-router-dom";
+import { BrowserRouter as Router, useHistory, Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const history = useHistory();
+
+  function Login() {
+    console.warn(email, password);
+  }
+
+  const onNavigateSignup = () => {
+    history.push("/signup");
+  };
+
   return (
     <div style={{ backgroundImage: `url(${background})` }}>
       <meta charSet="UTF-8" />{" "}
@@ -32,6 +45,7 @@ const Login = () => {
               <i className="fas fa-envelope" />
             </label>
             <input
+              onChange={(e) => setEmail(e.target.value)}
               type="email"
               id="email"
               name="email"
@@ -42,6 +56,7 @@ const Login = () => {
               <i className="fas fa-lock" />
             </label>
             <input
+              onChange={(e) => setPassword(e.target.value)}
               type="password"
               id="password"
               name="password"
@@ -49,7 +64,7 @@ const Login = () => {
               required
             />
             <div className="tabSubmitBtn">
-              <button type="submit">LOGIN</button>
+              <button onClick={onNavigateSignup}>LOGIN</button>
             </div>
           </div>
         </form>
