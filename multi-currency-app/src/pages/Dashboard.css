@@ -1,0 +1,64 @@
+.mainContent {
+    width: 90% !important;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    padding-left: 10%;
+    padding-right: 25%;
+    background-color: rgba(0, 47, 103, 1);
+    height: 100vh !important;
+    float: right;
+}
+
+.card {
+    background-color: grey;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
+    border-radius: 1em;
+    color: white;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+.w-75 {
+    width: 75% !important;
+}
+
+.w-50 {
+    width: 50% !important;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: center
+}
+
+.text-center {
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: white;
+}
+
+tr:nth-child(odd) {
+    background-color: grey;
+}
+
+th {
+    background-color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 2%;
+}
+
+td {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 2%;
+}
+

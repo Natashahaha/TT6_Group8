@@ -4,9 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import DashBoard from "./pages/DashBoard";
-import CurrencyExchange from "./pages/CurrencyExchange";
-
-import 'bootstrap/dist/css/bootstrap.min.css';
+import ManageWallet from "./pages/ManageWallet";
 
 function App() {
   return (
@@ -16,11 +14,11 @@ function App() {
           <Route path="/" exact component={() => <Login />} />
           <Route path="/register" exact component={() =><Register />} />
           <Route path="/dashboard" exact component={() => <DashBoard />} />
-          <Route path="/exchange" exact component={() => <CurrencyExchange/>} />
+          <Route path="/manage" exact component={() => <ManageWallet />} />
+
         </Router>
       </Switch>
     </div>
   );
 }
-
 export default App;

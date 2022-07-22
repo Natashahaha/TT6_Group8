@@ -1,31 +1,43 @@
+import "./Dashboard.css";
+
 const DashBoard = () => {
   return (
-    <div>DashBoard
-        <div class="profileSideBar">
-          <i class="fas fa-user-tag"></i> 
-          <p> Hello,
-            <br> username/email</br>
-          </p>
-          <div class="navigationTab">
-            {/* <Link to="/dasboard" href="#">
-              Dashboard
-              </Link>
-            <Link to="/wallet" href="#">
-              Wallet
-              </Link>
-            <Link to="/exchange" href="#">
-              Exchange
-            </Link> */}
+    <div>
+      <div class="profileSideBar"></div>
+      <div class="mainContent">
+        <div className="row">
+          <div className="card w-100">
+            <h2>Multi Currency Wallet Balance</h2>
+            <p>$40.89 (SGD)</p>
+            <p>72.12 (USD)</p>
           </div>
         </div>
+        <p style={{color:'white', fontSize:'20px'}}>Currency Exchange Rate Table</p>
+        <div className="row">
 
-        <div>
-        <div class="balanceOverview"></div>
+          <table class="w-100">
+            <tr>
+              <th>
+                Currency
+              </th>
+              <th>
+                Rate
+              </th>
+            </tr>
+            <tr>
+              <td>AUD</td>
+              <td>1.89</td>
+            </tr>
+            <tr>
+              <td>AUD</td>
+              <td>1.89</td>
+            </tr>
+          </table>
         </div>
+      </div>
     </div>
-    
-    
   )
+
 }
 
 export default DashBoard
