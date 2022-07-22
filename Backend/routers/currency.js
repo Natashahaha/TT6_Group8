@@ -10,12 +10,15 @@ router.get('/all', (req,res) => {
 })
 
 router.post('/deduct', (req,res) => {
-    const deductedAmount = req.amount
-    const cur_id = req.cur_id
-
-    Currency.findOneAndUpdate({id: cur_id}, {amount: amount - deductedAmount} ).then(currency => {
+    const deductedAmount = req.body.amount
+    Currency.findOne({id: req.body.id}).then(currency => {
+        const curAmount = currency.amount
+        Currency.findOneAndUpdate({id: req.body.id}, {amount: curAmount - deductedAmount} ).then(currency => {
+            
+        })
         res.json(currency)
     })
+    
 })
 
 module.exports = router
