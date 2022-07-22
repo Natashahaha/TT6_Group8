@@ -57,7 +57,16 @@ const Login = () => {
   };
 
   return (
-    <div style={{ backgroundImage: `url(${background})` }}>
+    
+    // <div style={{ backgroundImage: `url(${background})` }}>
+
+    // trying to modify
+      <div style={{ 
+        backgroundImage: `url(${background})`,
+        width: '100vw',
+        height: '100vh'
+      }}>
+        
       <meta charSet="UTF-8" />{" "}
       <link
         rel="stylesheet"
