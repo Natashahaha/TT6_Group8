@@ -8,4 +8,11 @@ router.get('/all', (req,res) => {
     })
 })
 
+
+router.get('/test/:id', (req,res) => {
+    Wallet.find({_id: id}).then(wallets => {
+        res.json(wallets)
+    })
+})
+
 module.exports = router
