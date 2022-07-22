@@ -20,9 +20,13 @@ const Exchange = () => {
           </div>
   
           <div class="balanceOverview">
-          <label className="walletLabel" htmlFor="wallet">Wallet</label>
-          <label className="amtExchangeLabel" htmlFor="amt">Amount to Exchange:</label>
-          <label className="currencyExchangeLabel" htmlFor="currency">Currency to Exchange to:</label>
+            <label className="walletLabel" htmlFor="wallet">Wallet</label>
+            <label className="amtExchangeLabel" htmlFor="amt">Amount to Exchange:</label>
+            <label className="currencyExchangeLabel" htmlFor="currency">Currency to Exchange to:</label>
+            {/* to double check on the button */}
+            <div className="tabSubmitBtn">
+              <button onClick={handleSubmit}>LOGIN</button> 
+            </div>
           </div>
       </div>
       
