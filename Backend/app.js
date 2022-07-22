@@ -13,9 +13,10 @@ const walletRoute = require('./routers/wallet')
 // const passport = require('passport')
 const cors = require('cors')
 
-// To allow the across domain visit from frontend
+
 dotenv.config()
 
+// To allow the across domain visit from frontend
 app.use(cors({
     credentials: true,
     origin: ['http://localhost:3000']
