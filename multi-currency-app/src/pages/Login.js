@@ -61,6 +61,7 @@ const Login = () => {
     // <div style={{ backgroundImage: `url(${background})` }}>
 
     // trying to modify
+    
       <div style={{ 
         backgroundImage: `url(${background})`,
         backgroundPosition: "center",
