@@ -9,8 +9,8 @@ router.get('/all', (req,res) => {
 })
 
 
-router.get('/test', (req,res) => {
-    Wallet.find({user_id: 1}).then(wallets => {
+router.get('/:id', (req,res) => {
+    Wallet.find({user_id: req.params.id}).then(wallets => {
         res.json(wallets)
     })
 })
