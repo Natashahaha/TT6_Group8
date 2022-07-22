@@ -10,6 +10,10 @@ const TransactionSchema = new mongoose.Schema({
     creditCurrency: String,
     creditAmount: Number,
     creditDescription: String
-  });
+  },
+    {
+      timestamps: true
+    }
+  );
 
 module.exports = mongoose.model('Transaction', TransactionSchema)
