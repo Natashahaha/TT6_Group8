@@ -22,8 +22,8 @@
         <div class="loginRegContainer">
             <div class="loginRegTab">
                 <div class="tabOption">
-                    <a class="active"href="register.html">Register</a>
-                    <a href="index.html">Login</a>
+                    <a class="active"href="{{ url_for('register') }}">Register</a>
+                    <a href="{{ url_for('index') }}">Login</a>
                 </div>
                 <form id="regForm">
                     <div class="tabContent">
@@ -33,8 +33,8 @@
                         <label class="password_label"for="password">Enter Your Password:</label>
                         <input type="password"id="password"name="password"minlength="8">
                 
-                        <label class="ic_label"for="ic">Enter Your NRIC:</label>
-                        <input type="text"id="ic"name="ic"required>
+                        <label class="username_label"for="ic">Username</label>
+                        <input type="text"id="username"name="username"required>
 
                         <div class="tabSubmitBtn">
                             <button type="submit">REGISTER</button>
