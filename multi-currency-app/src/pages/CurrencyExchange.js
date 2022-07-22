@@ -5,6 +5,7 @@ import { Container } from 'react-bootstrap';
 import Dropdown from 'react-bootstrap/Dropdown';
 import axios from 'axios'
 import ListGroup from 'react-bootstrap/ListGroup';
+import Badge from 'react-bootstrap/Badge';
 
 
 
@@ -94,7 +95,7 @@ const CurrencyExchange = () => {
         <h2>Currency Conversion</h2>
         <ListGroup>
             {currencies.map((c) => {
-                return <ListGroup.Item>{c.exchange_currency} {c.rate}</ListGroup.Item>
+                return <ListGroup.Item><Badge bg="secondary">{c.exchange_currency}</Badge> {c.rate}</ListGroup.Item>
             })}
             
 
