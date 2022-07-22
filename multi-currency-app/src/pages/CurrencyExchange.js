@@ -4,6 +4,9 @@ import Form from 'react-bootstrap/Form';
 import { Container } from 'react-bootstrap';
 import Dropdown from 'react-bootstrap/Dropdown';
 import axios from 'axios'
+import Currencies from './Currencies';
+import ListGroup from 'react-bootstrap/ListGroup';
+
 
 
 const CurrencyExchange = () => {
@@ -16,8 +19,11 @@ const CurrencyExchange = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const obj = {walletId, amount, newCurrency}
-        console.log(obj)
+        const obj = {wallet_id: walletId, credit_amount: amount, credit_currency: newCurrency};
+        axios.post('http://localhost:5000/api/transaction/add',obj).then(res => {
+            console.log("success")
+            
+        })
     }
 
     const handleAmount = (e) => {
@@ -31,7 +37,7 @@ const CurrencyExchange = () => {
     const loadCurrencies = () => {
         // e.preventDefault()
         axios.get('http://localhost:5000/api/exchange/all').then(res => {
-            const currenciesFromApi = res.data.map(c => c.exchange_currency)
+            const currenciesFromApi = res.data
             setCurrencies(currenciesFromApi)
         }
         
@@ -66,9 +72,7 @@ const CurrencyExchange = () => {
         </Form.Group>
         
         <Dropdown>
-        {/* <Dropdown.Toggle variant="success" id="dropdown-basic">
-            Currency to exchange to
-        </Dropdown.Toggle> */}
+
 
         <Form.Group className="mb-3" controlId="">
             <Form.Label>Currency exchange to</Form.Label>
@@ -85,6 +89,17 @@ const CurrencyExchange = () => {
         <Button variant="primary" type="submit" >
             Submit
         </Button>
+
+
+        <></>
+        <h2>Currency Conversion</h2>
+        <ListGroup>
+            {currencies.map((c) => {
+                return <ListGroup.Item>{c.exchange_currency} {c.rate}</ListGroup.Item>
+            })}
+            
+
+        </ListGroup>
         </Form>
     </Container>
   )
