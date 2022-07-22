@@ -44,6 +44,12 @@ const Register = () => {
               placeholder="Email"
               required
             />
+            
+            <label htmlFor="username">
+              <i className="fas fa-user" />
+            </label>
+            <input type="text" id="username" name="username" placeholder="Username" required />
+
             <label htmlFor="password">
               <i className="fas fa-lock" />
             </label>
@@ -54,10 +60,12 @@ const Register = () => {
               placeholder="Password"
               minLength={8}
             />
-            <label htmlFor="username">
+
+            {/* <label htmlFor="username">
               <i className="fas fa-user" />
             </label>
-            <input type="text" id="username" name="username" placeholder="Username" required />
+            <input type="text" id="username" name="username" placeholder="Username" required /> */}
+            
             <div className="tabSubmitBtn">
               <button type="submit">REGISTER</button>
             </div>
