@@ -1,6 +1,6 @@
 from auth import *
 import csv
-# from datetime import datetime
+from datetime import datetime
 from werkzeug.utils import secure_filename
 
 
@@ -34,7 +34,6 @@ def register():
             message = "Email address already exists"  
             print(message)        
             return render_template('register.html', message=message)
-            
 
         else:
             newUser = systemUser(regEmail, generate_password_hash(regPassword, method='sha256'), regNric)
@@ -76,6 +75,12 @@ def index():
             print(f"Password: {loginPassword}")
             return redirect(url_for("catalog"))
 
+
+
+@app.route("/dashboard", methods= ["GET","POST"])
+@login_required
+def dashboard():
+    return render_template("dashboard.html", name=current_user.record['email'])
 
 @app.route("/logout")
 @login_required
