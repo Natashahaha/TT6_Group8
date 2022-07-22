@@ -11,11 +11,13 @@ function App() {
     <div className="App">
       <Switch>
         <Router>
+          <Route path="/login2" exact component={() => <Login2 />} />
+          <Route path="/register2" exact component={() =><Register2 />} />
           <Route path="/" exact component={() => <Login />} />
           <Route path="/register" exact component={() =><Register />} />
           <Route path="/dashboard" exact component={() => <DashBoard />} />
           <Route path="/manage" exact component={() => <ManageWallet />} />
-
+          <Route path="/currencywallet" exact component={() => <CurrencyWallet />} /> 
         </Router>
       </Switch>
     </div>
