@@ -18,6 +18,10 @@ const DashBoard = () => {
             </Link>
           </div>
         </div>
+
+        <div>
+        <div class="balanceOverview"></div>
+        </div>
     </div>
     
     
