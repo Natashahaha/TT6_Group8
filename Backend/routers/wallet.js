@@ -10,7 +10,7 @@ router.get('/all', (req,res) => {
 
 
 router.get('/test', (req,res) => {
-    Wallet.find({user_id: "1"}).then(wallets => {
+    Wallet.find({user_id: 1}).then(wallets => {
         res.json(wallets)
     })
 })
