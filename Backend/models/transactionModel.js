@@ -2,14 +2,14 @@ const mongoose = require("mongoose")
 
 const TransactionSchema = new mongoose.Schema({
     id:  Number,
-    walletId: Number,
-    debitId: Number,
-    debitCurrency: String,
-    debitAmount: Number,
-    creditId: Number,
-    creditCurrency: String,
-    creditAmount: Number,
-    creditDescription: String
+    wallet_id: Number,
+    debit_id: Number,
+    debit_currency: String,
+    debit_amount: Number,
+    credit_id: Number,
+    credit_currency: String,
+    credit_amount: Number,
+    credit_description: String
   },
     {
       timestamps: true

@@ -16,8 +16,11 @@ const CurrencyExchange = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const obj = {walletId, amount, newCurrency}
-        console.log(obj)
+        const obj = {wallet_id: walletId, credit_amount: amount, credit_currency: newCurrency};
+        axios.post('http://localhost:5000/api/transaction/add',obj).then(res => {
+            console.log("success")
+            
+        })
     }
 
     const handleAmount = (e) => {
