@@ -1,6 +1,10 @@
 const DashBoard = () => {
   return (
-    <div>DashBoard</div>
+    <div>DashBoard
+      <div class="profileSideBar"></div>
+    </div>
+    
+    
   )
 }
 
