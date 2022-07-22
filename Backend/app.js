@@ -3,10 +3,11 @@ const app = express()
 
 const mongoose = require('mongoose')
 const dotenv = require('dotenv')
-const userRoute = require('./routers/users.js')
+// const userRoute = require('./routers/users.js')
 const authRoute = require('./routers/auth.js')
-const postRoute = require('./routers/posts')
-const passport = require('passport')
+// const postRoute = require('./routers/posts')
+const curRoute = require('./routers/currency')
+// const passport = require('passport')
 const cors = require('cors')
 
 // To allow the across domain visit from frontend
@@ -25,12 +26,13 @@ mongoose.connect(process.env.MONGO_URL, {useNewUrlParser: true, useUnifiedTopolo
 // Middleware
 app.use(express.json())
 
-app.use(passport.initialize())
-require('./config/passport')(passport)
+// app.use(passport.initialize())
+// require('./config/passport')(passport)
 
-app.use('/api/users', userRoute)
+// app.use('/api/users', userRoute)
 app.use('/api/auth', authRoute)
-app.use('/api/posts',postRoute)
+app.use('/api/cur', curRoute)
+// app.use('/api/posts',postRoute)
 
 
 app.listen(5000, () => {
