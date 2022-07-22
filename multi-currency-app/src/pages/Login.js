@@ -123,7 +123,7 @@ const Login = () => {
               required
             />
             <div className="tabSubmitBtn">
-              <button onClick={handleSubmit}>LOGIN</button>
+              <button type="submit" onClick={handleSubmit}>LOGIN</button>
             </div>
           </div>
         </form>
